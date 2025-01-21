@@ -68,13 +68,6 @@ if __name__ == "__main__":
     # Calculate the sum of numbers
     total = calculate_sum(numbers)
     print(f"Total of numbers: {total}")
-
-    # Generate and display a message based on the total
-        # Generate and display a message based on the total
-            # Generate and display a message based on the total
-                # Generate and display a message based on the total
-                    # Generate and display a message based on the total
-                        # Generate and display a message based on the total
                         
     print(generate_message(total))
 
@@ -89,3 +82,7 @@ if __name__ == "__main__":
     # Show a motivational quote
     print("\nMotivational Quote of the Day:")
     typing_effect(get_motivational_quote())
+
+    # Show a motivational quote
+    print("\nMotivational Quote of the Day:")
+    typing_effect(get_motivational_quote()) 
