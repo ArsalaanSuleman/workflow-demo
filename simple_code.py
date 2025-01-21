@@ -20,6 +20,10 @@ def generate_message(total):
     else:
         return "The total is large."
 
+# New feature: Function to double each number in a list
+def double_numbers(numbers):
+    return [number * 2 for number in numbers]
+
 # Main script execution
 if __name__ == "__main__":
     print(f"Name: {name}")
@@ -35,3 +39,7 @@ if __name__ == "__main__":
 
     # Generate and display a message based on the total
     print(generate_message(total))
+
+    # Double the numbers and display them
+    doubled = double_numbers(numbers)
+    print(f"Doubled numbers: {doubled}")
