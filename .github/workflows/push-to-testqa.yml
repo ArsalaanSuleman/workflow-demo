@@ -1,0 +1,21 @@
+name: Push to testqa
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  push-to-testqa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Push to testqa branch
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git checkout -b testqa || git checkout testqa
+          git merge dev
+          git push origin testqa
