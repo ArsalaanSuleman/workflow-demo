@@ -23,5 +23,5 @@ jobs:
         run: |
           git fetch origin
           git checkout testqa || git checkout -b testqa
-          git merge dev
+          git merge --allow-unrelated-histories dev
           git push origin testqa
