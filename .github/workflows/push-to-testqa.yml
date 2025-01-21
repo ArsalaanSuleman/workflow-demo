@@ -1,13 +1,14 @@
-name: Push to testqa
+name: Merge `dev` to `testqa`
 
 on:
   push:
     branches:
-      - dev
+      - dev # Trigger the workflow on push to dev
 
 jobs:
-  push-to-testqa:
+  merge-to-testqa:
     runs-on: ubuntu-22.04
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -17,11 +18,16 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      - name: Push to testqa branch
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Fetch all branches
+        run: git fetch --all
+
+      - name: Merge `dev` into `testqa`
         run: |
-          git fetch origin
-          git checkout testqa || git checkout -b testqa
-          git merge --allow-unrelated-histories dev
-          git push origin testqa
+          git checkout testqa
+          git pull origin testqa
+          git merge origin/dev --no-edit  # Merge dev into testqa without user edit
+          git push origin testqa  # Push merged changes to testqa
+
+      - name: Push changes to testqa
+        run: |
+          git push origin testqa  # Ensures that changes are pushed to testqa
