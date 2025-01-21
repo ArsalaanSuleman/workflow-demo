@@ -1,0 +1,27 @@
+name: Push to testqa
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  push-to-testqa:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Push to testqa branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git fetch origin
+          git checkout testqa || git checkout -b testqa
+          git merge --allow-unrelated-histories dev
+          git push origin testqa
