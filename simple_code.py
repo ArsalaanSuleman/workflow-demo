@@ -98,3 +98,23 @@ if __name__ == "__main__":
      # Show a motivational quote
     print("\nMotivational Quote of the Day:")
     typing_effect(get_motivational_quote()) 
+
+        # Show a motivational quote
+    print("\nMotivational Quote of the Day:")
+    typing_effect(get_motivational_quote())
+
+    # Show a motivational quote
+    print("\nMotivational Quote of the Day:")
+    typing_effect(get_motivational_quote()) 
+
+     # Show a motivational quote
+    print("\nMotivational Quote of the Day:")
+    typing_effect(get_motivational_quote()) 
+
+     # Show a motivational quote
+    print("\nMotivational Quote of the Day:")
+    typing_effect(get_motivational_quote()) 
+
+     # Show a motivational quote
+    print("\nMotivational Quote of the Day:")
+    typing_effect(get_motivational_quote()) 
