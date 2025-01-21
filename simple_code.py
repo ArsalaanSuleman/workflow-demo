@@ -88,3 +88,7 @@ if __name__ == "__main__":
     # Modify an existing function or add a new one
     def new_feature():
         return "This is a new feature added to simple_code.py!"
+    
+     # Show a motivational quote
+    print("\nMotivational Quote of the Day:")
+    typing_effect(get_motivational_quote()) 
