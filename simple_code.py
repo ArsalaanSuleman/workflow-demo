@@ -70,6 +70,12 @@ if __name__ == "__main__":
     print(f"Total of numbers: {total}")
 
     # Generate and display a message based on the total
+        # Generate and display a message based on the total
+            # Generate and display a message based on the total
+                # Generate and display a message based on the total
+                    # Generate and display a message based on the total
+                        # Generate and display a message based on the total
+                        
     print(generate_message(total))
 
     # Double the numbers and display them
