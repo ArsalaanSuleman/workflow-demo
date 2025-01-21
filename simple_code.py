@@ -6,6 +6,8 @@ name = "Workflow Demo"
 work = "Automating Branch Push"
 numbers = [1, 2, 3]
 
+def greet_user(name):
+    return f"Hello, {name}! This is a new feature in the workflow."
 
 # Function to greet a user
 def greet_user(name):

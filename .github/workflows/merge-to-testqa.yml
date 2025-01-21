@@ -21,13 +21,17 @@ jobs:
       - name: Fetch all branches
         run: git fetch --all
 
+      - name: Push to `testqa` branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git fetch origin
+          git checkout testqa || git checkout -b testqa
+          git push origin testqa
+
       - name: Merge `dev` into `testqa`
         run: |
           git checkout testqa
           git pull origin testqa
           git merge origin/dev --allow-unrelated-histories --no-edit # Merge dev into testqa
           git push origin testqa  # Push merged changes to testqa
-
-      - name: Push changes to testqa
-        run: |
-          git push origin testqa  # Ensures that changes are pushed to testqa
