@@ -25,7 +25,7 @@ jobs:
         run: |
           git checkout testqa
           git pull origin testqa
-          git merge origin/dev --no-edit  # Merge dev into testqa without user edit
+          git merge origin/dev --allow-unrelated-histories --no-edit # Merge dev into testqa
           git push origin testqa  # Push merged changes to testqa
 
       - name: Push changes to testqa
