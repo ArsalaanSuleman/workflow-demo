@@ -83,58 +83,8 @@ if __name__ == "__main__":
 
     # Show a motivational quote
     print("\nMotivational Quote of the Day:")
-    typing_effect(get_motivational_quote())
-
-    # Show a motivational quote
-    print("\nMotivational Quote of the Day:")
     typing_effect(get_motivational_quote()) 
 
-     # Show a motivational quote
-    print("\nMotivational Quote of the Day:")
-    typing_effect(get_motivational_quote()) 
-
-     # Show a motivational quote
-    print("\nMotivational Quote of the Day:")
-    typing_effect(get_motivational_quote()) 
-
-     # Show a motivational quote
-    print("\nMotivational Quote of the Day:")
-    typing_effect(get_motivational_quote()) 
-
-        # Show a motivational quote
-    print("\nMotivational Quote of the Day:")
-    typing_effect(get_motivational_quote())
-
-    # Show a motivational quote
-    print("\nMotivational Quote of the Day:")
-    typing_effect(get_motivational_quote()) 
-
-     # Show a motivational quote
-    print("\nMotivational Quote of the Day:")
-    typing_effect(get_motivational_quote()) 
-
-     # Show a motivational quote
-    print("\nMotivational Quote of the Day:")
-    typing_effect(get_motivational_quote()) 
-
-     # Show a motivational quote
-    print("\nMotivational Quote of the Day:")
-    typing_effect(get_motivational_quote()) 
-
-    # Function to generate a message based on the sum
-def generate_message(total):
-    if total < 10:
-        return "The total is small."
-    elif 10 <= total <= 20:
-        return "The total is moderate."
-    else:
-        return "The total is large."
-    
-    # Function to generate a message based on the sum
-def generate_message(total):
-    if total < 10:
-        return "The total is small."
-    elif 10 <= total <= 20:
-        return "The total is moderate."
-    else:
-        return "The total is large."
+    # Modify an existing function or add a new one
+    def new_feature():
+        return "This is a new feature added to simple_code.py!"
