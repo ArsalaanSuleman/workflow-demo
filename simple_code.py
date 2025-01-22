@@ -101,3 +101,5 @@ if __name__ == "__main__":
 
     # Show workflow status
     workflow_status()
+
+    print("\n--- End of Script ---")
